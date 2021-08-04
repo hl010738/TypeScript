@@ -76,3 +76,54 @@ cc.run();
 var dd = new DD();
 dd.cc();
 console.log("---------------------");
+// 静态属性和方法
+var FF = /** @class */ (function () {
+    function FF() {
+    }
+    FF.run = function () {
+        return FF.ff;
+    };
+    return FF;
+}());
+FF.run();
+console.log("---------------------");
+// 多态
+var GG = /** @class */ (function () {
+    function GG() {
+    }
+    GG.prototype.run = function () { };
+    return GG;
+}());
+var HH = /** @class */ (function (_super) {
+    __extends(HH, _super);
+    function HH() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    HH.prototype.run = function () {
+        console.log("HH " + this.name);
+    };
+    return HH;
+}(GG));
+var hh = new HH();
+hh.run();
+console.log("---------------------");
+// 抽象类 抽象方法
+var II = /** @class */ (function () {
+    function II() {
+    }
+    II.prototype.test = function () { console.log("II " + this.name); };
+    return II;
+}());
+var JJ = /** @class */ (function (_super) {
+    __extends(JJ, _super);
+    function JJ() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    JJ.prototype.run = function () {
+        console.log("JJ " + this.name);
+    };
+    return JJ;
+}(II));
+var jj = new JJ();
+jj.run();
+console.log("---------------------");

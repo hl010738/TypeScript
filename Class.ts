@@ -71,8 +71,44 @@ let dd = new DD();
 dd.cc();
 console.log("---------------------");
 
+// 静态属性和方法
+class FF {
+    static ff: string
 
+    static run(){
+        return FF.ff;
+    }
+}
+FF.run();
+console.log("---------------------");
 
+// 多态
+class GG {
+    name: string;
+    run(){}
+}
+class HH extends GG{
+    run() {
+        console.log(`HH ${this.name}`);
+    }
+}
+let hh = new HH();
+hh.run();
+console.log("---------------------");
 
+// 抽象类 抽象方法
+abstract class II {
+    name: string;
+    abstract run();
+    test(){console.log(`II ${this.name}`);}
+}
+class JJ extends II{
+    run() {
+        console.log(`JJ ${this.name}`);
+    }
+}
+let jj = new JJ();
+jj.run();
+console.log("---------------------");
 
 
