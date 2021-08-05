@@ -21,3 +21,4 @@ var B;
 })(B || (B = {}));
 var aaa = new A.AA();
 var baa = new B.AA();
+//# sourceMappingURL=NameSpace.js.map

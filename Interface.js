@@ -30,3 +30,4 @@ var BB = /** @class */ (function () {
     BB.prototype.test = function () { };
     return BB;
 }());
+//# sourceMappingURL=Interface.js.map

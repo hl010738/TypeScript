@@ -21,3 +21,4 @@ var int1 = function (value) {
     return value;
 };
 console.log("------------------");
+//# sourceMappingURL=Generics.js.map

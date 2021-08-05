@@ -127,3 +127,4 @@ var JJ = /** @class */ (function (_super) {
 var jj = new JJ();
 jj.run();
 console.log("---------------------");
+//# sourceMappingURL=Class.js.map

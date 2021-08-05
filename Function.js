@@ -53,3 +53,4 @@ function f7(name, age) {
 var f8 = function () {
     alert();
 };
+//# sourceMappingURL=Function.js.map

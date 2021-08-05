@@ -48,3 +48,4 @@ var a1;
 a1 = (function () {
     throw new Error("aaa");
 })();
+//# sourceMappingURL=DataType.js.map
