@@ -1,16 +1,16 @@
 console.log("数据类型");
 // boolean
-var flag = true;
+let flag = true;
 // number
-var num = 123;
+let num = 123;
 // String
-var str = "aaa";
+let str = "aaa";
 // array
-var array = [1, 2, 3];
-var arr = ["aaa", "bbb", "ccc"];
-var a = [1, 2, 3];
+let array = [1, 2, 3];
+let arr = ["aaa", "bbb", "ccc"];
+let a = [1, 2, 3];
 // tuple 元组类型
-var arrr = ["aaa", 111, true];
+let arrr = ["aaa", 111, true];
 // enum
 var Flags;
 (function (Flags) {
@@ -28,14 +28,14 @@ var Flags2;
     Flags2[Flags2["bbb"] = 4] = "bbb";
     Flags2[Flags2["ccc"] = 5] = "ccc";
 })(Flags2 || (Flags2 = {}));
-var flag2 = Flags.aaa;
+let flag2 = Flags.aaa;
 // any 类型
-var arg1 = 111;
+let arg1 = 111;
 arg1 = "aaa";
 // null undefined
-var arg2;
-var arg3;
-var arg4;
+let arg2;
+let arg3;
+let arg4;
 arg4 = 123;
 // void
 function f() {
@@ -44,8 +44,8 @@ function f() {
 // never 包含 null undefined
 // 表示从不会出现的值
 // 声明 never 类型只能被 never 赋值
-var a1;
-a1 = (function () {
+let a1;
+a1 = (() => {
     throw new Error("aaa");
 })();
 //# sourceMappingURL=DataType.js.map

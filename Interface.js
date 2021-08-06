@@ -1,33 +1,29 @@
 console.log("接口");
 function f1(param) { }
-var param1 = {
+let param1 = {
     name1: "aaa",
     name2: "bbb"
 };
 f1(param1);
 console.log("----------------------");
-var a = function (key, value) {
+let a = function (key, value) {
     return "";
 };
 console.log(a("key", "value"));
 console.log("----------------------");
-var arr = ["aaa", "bbb"];
+let arr = ["aaa", "bbb"];
 console.log(arr[0]);
-var arr2 = { name: "aaa" };
-var AA = /** @class */ (function () {
-    function AA(name) {
+let arr2 = { name: "aaa" };
+class AA {
+    constructor(name) {
         this.name = name;
     }
-    AA.prototype.run = function () {
+    run() {
         return this.name;
-    };
-    return AA;
-}());
-var BB = /** @class */ (function () {
-    function BB() {
     }
-    BB.prototype.run = function () { };
-    BB.prototype.test = function () { };
-    return BB;
-}());
+}
+class BB {
+    run() { }
+    test() { }
+}
 //# sourceMappingURL=Interface.js.map

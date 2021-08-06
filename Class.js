@@ -1,130 +1,85 @@
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 console.log("类");
 // 定义类
-var AA = /** @class */ (function () {
-    function AA(name) {
+class AA {
+    constructor(name) {
         this.name = name;
     }
-    AA.prototype.getName = function () {
+    getName() {
         return this.name;
-    };
-    AA.prototype.setName = function (name) {
+    }
+    setName(name) {
         this.name = name;
-    };
-    AA.prototype.run = function () {
-        console.log("AA " + this.name);
-    };
-    return AA;
-}());
-var aa = new AA("aa");
+    }
+    run() {
+        console.log(`AA ${this.name}`);
+    }
+}
+let aa = new AA("aa");
 aa.run();
 console.log(aa.getName());
 console.log("---------------------");
 // 继承
-var BB = /** @class */ (function (_super) {
-    __extends(BB, _super);
-    function BB(name) {
-        return _super.call(this, name) || this;
+class BB extends AA {
+    constructor(name) {
+        super(name);
     }
-    BB.prototype.run = function () {
-        console.log("BB " + this.name);
-    };
-    BB.prototype.bb = function () {
-        console.log("BB " + this.b);
-    };
-    return BB;
-}(AA));
-var bb = new BB("bb");
+    run() {
+        console.log(`BB ${this.name}`);
+    }
+    bb() {
+        console.log(`BB ${this.b}`);
+    }
+}
+let bb = new BB("bb");
 bb.run();
 console.log("---------------------");
 // 类的修饰符
-var CC = /** @class */ (function () {
-    function CC() {
+class CC {
+    run() {
+        console.log(`CC ${this.v}`);
     }
-    CC.prototype.run = function () {
-        console.log("CC " + this.v);
-    };
-    return CC;
-}());
-var DD = /** @class */ (function (_super) {
-    __extends(DD, _super);
-    function DD() {
-        return _super !== null && _super.apply(this, arguments) || this;
+}
+class DD extends CC {
+    cc() {
+        console.log(`CC ${this.t}`);
     }
-    DD.prototype.cc = function () {
-        console.log("CC " + this.t);
-    };
-    return DD;
-}(CC));
-var cc = new CC();
+}
+let cc = new CC();
 cc.p = "cc";
 cc.run();
-var dd = new DD();
+let dd = new DD();
 dd.cc();
 console.log("---------------------");
 // 静态属性和方法
-var FF = /** @class */ (function () {
-    function FF() {
-    }
-    FF.run = function () {
+class FF {
+    static run() {
         return FF.ff;
-    };
-    return FF;
-}());
+    }
+}
 FF.run();
 console.log("---------------------");
 // 多态
-var GG = /** @class */ (function () {
-    function GG() {
+class GG {
+    run() { }
+}
+class HH extends GG {
+    run() {
+        console.log(`HH ${this.name}`);
     }
-    GG.prototype.run = function () { };
-    return GG;
-}());
-var HH = /** @class */ (function (_super) {
-    __extends(HH, _super);
-    function HH() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    HH.prototype.run = function () {
-        console.log("HH " + this.name);
-    };
-    return HH;
-}(GG));
-var hh = new HH();
+}
+let hh = new HH();
 hh.run();
 console.log("---------------------");
 // 抽象类 抽象方法
-var II = /** @class */ (function () {
-    function II() {
+class II {
+    test() { console.log(`II ${this.name}`); }
+}
+class JJ extends II {
+    run() {
+        console.log(`JJ ${this.name}`);
     }
-    II.prototype.test = function () { console.log("II " + this.name); };
-    return II;
-}());
-var JJ = /** @class */ (function (_super) {
-    __extends(JJ, _super);
-    function JJ() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    JJ.prototype.run = function () {
-        console.log("JJ " + this.name);
-    };
-    return JJ;
-}(II));
-var jj = new JJ();
+}
+let jj = new JJ();
 jj.run();
 console.log("---------------------");
 //# sourceMappingURL=Class.js.map

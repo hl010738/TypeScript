@@ -2,11 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.DataBase = void 0;
 console.log("导出");
-var DataBase = /** @class */ (function () {
-    function DataBase() {
-    }
-    DataBase.prototype.save = function () { };
-    return DataBase;
-}());
+class DataBase {
+    save() { }
+}
 exports.DataBase = DataBase;
 //# sourceMappingURL=ExportData.js.map
